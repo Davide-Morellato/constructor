@@ -19,5 +19,23 @@ public class App {
 
         //invoco il metodo add() a cui passo dei valori
         personFour.add(5, 3);
+
+
+
+        /////////////////////////////////////
+        //
+        //
+        //creo l'istanza della classe
+        //assegno dei valori per il costruttore
+        Car carOne = new Car("Fiat", "Panda", 90);
+        Car carTwo = new Car("Opel", "Astra", 120);
+
+        //stampo le proprietà delle istanze
+        System.out.println("carOne brand: " + carOne.brand);
+        System.out.println("carTwo model: " + carTwo.model);
+
+        //invoco il metodo 'power' per entrambe le istanze
+        carOne.power();
+        carTwo.power();
     }
 }

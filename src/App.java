@@ -37,5 +37,25 @@ public class App {
         //invoco il metodo 'power' per entrambe le istanze
         carOne.power();
         carTwo.power();
+
+        /////////////////////////////////
+        //
+        //PER L'OVERLOADED CONSTRUCTOR
+        Car carThree = new Car("Subaru");
+
+        Car carFour = new Car("Volvo", "XC40");
+
+        Car carFive = new Car("Reanult", "Clio", 90);
+
+        System.out.println("primo costruttore: " + carThree.brand); //ENTRA NEL PRIMO COSTRUTTORE => SE carThree.model = 0 (ossia che non esiste un valore per quella proprietà)
+
+        System.out.println("secondo costruttore: " + carFour.brand + " " + carFour.model); //ENTRA NEL SECONDO COSOTRUTTORE
+
+        System.out.println("terzo costruttore: " + carFive.brand + " " + carFive.model + " " + carFive.horsePower); //ENTRA NEL TERZO COSTRUTTORE
+
+
+        carThree.power(); //Invocando questo metodo con l'istanza carThree, non ottengo alcun risoltato perché fa riferimento alla proprietà horsePower, che per questo oggetto NON esiste (il costruttore non presenta questo parametro)
+
+        carFive.power(); //avendo quest'istanza il parametro di riferimento horsePower nel costruttore, è possibile visualizzarne il valore nel terminale
     }
 }
